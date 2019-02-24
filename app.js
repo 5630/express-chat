@@ -7,8 +7,10 @@ const flash = require('connect-flash');
 require('dotenv').config();
 
 const indexRouter = require('./routes');
+const connect = require('./schemas');
 
 const app = express();
+connect();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
